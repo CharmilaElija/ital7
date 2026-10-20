@@ -3,199 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Save The Date - Helena & Davi - Convite de Casamento</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Convite de Casamento Helena & Davi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#fff;font-family:'Montserrat',sans-serif;overflow-x:hidden}
-section{position:relative;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
-img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.overlay{position:absolute;inset:0;background:rgba(0,0,0,0.35)}
+body{background:#000}
+section{position:relative;width:100%;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+section img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,0.35);z-index:1}
+.conteudo{position:relative;z-index:2;text-align:center;color:#fff;padding:20px;width:90%}
 
-/* NOME DESENHANDO */
-.draw{font-family:'Great Vibes',cursive;font-size:62px;fill:none;stroke:white;stroke-width:1.2;stroke-dasharray:600;stroke-dashoffset:600;animation:write 3.8s ease forwards 0.6s}
-@keyframes write{0%{stroke-dashoffset:600;fill:transparent}70%{fill:transparent}100%{stroke-dashoffset:0;fill:white}}
+/* TELA 1 */
+.hd{font-family:'Cormorant Garamond',serif;font-size:90px;line-height:1}
+.script{font-family:'Great Vibes',cursive;font-size:46px;margin-top:5px}
+.data{font-size:11px;letter-spacing:5px;margin-top:10px}
+.topo{font-size:9px;letter-spacing:5px;margin-bottom:15px}
 
-/* PAINEL ESCONDIDO EM BAIXO */
-.conteudo-centro, .arco, .details-wrap, .wishes, .rsvp-box, .final-text, .save-box{
-  transform:translateY(110vh);opacity:0;
-  transition:all 1.2s cubic-bezier(0.22,1,0.36,1);
-  will-change:transform;
-}
-.ativo{transform:translateY(0)!important;opacity:1!important}
+/* SAVE THE DATE */
+.save{border:1.5px solid #fff;padding:35px 30px;background:rgba(0,0,0,0.3)}
+.save h3{font-size:10px;letter-spacing:5px;margin-bottom:15px;font-family:sans-serif}
+.save h2{font-family:'Great Vibes',cursive;font-size:52px;line-height:1.1}
+.save-date{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:5px;margin-top:15px}
 
-/* GERAL */
-.monograma{text-align:center;position:relative;z-index:2}
-.letras{font-family:'Cormorant Garamond',serif;font-size:120px;font-weight:300;letter-spacing:6px;line-height:1}
-.data{margin-top:12px;letter-spacing:6px;font-size:15px;font-weight:300}
-.conteudo-centro{text-align:center;padding:35px;max-width:400px;position:relative;z-index:3}
-.titulo{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;letter-spacing:3px}
-.pequeno{font-size:10px;letter-spacing:3.5px;line-height:1.9;font-weight:300}
-.nome{font-size:15px;letter-spacing:4px;margin:10px 0;font-weight:500}
-.and{font-family:'Great Vibes',cursive;font-size:36px;margin:6px 0}
-
-/* SAVE THE DATE - NOVA TELA */
-.save-box{text-align:center;border:1px solid rgba(255,255,255,0.4);padding:40px 35px;backdrop-filter:blur(2px);background:rgba(0,0,0,0.25)}
-.save-box h3{font-size:11px;letter-spacing:6px;margin-bottom:15px}
-.save-box h2{font-family:'Great Vibes',cursive;font-size:58px;line-height:1;margin-bottom:15px}
-.save-box .date-big{font-family:'Cormorant Garamond',serif;font-size:28px;letter-spacing:6px;font-weight:300}
-.save-box .local{font-size:9px;letter-spacing:3px;margin-top:20px;line-height:1.8}
-
-/* TELA 3 ARCO */
-.arco{background:rgba(140,107,88,0.92);width:92%;max-width:380px;border-radius:220px 220px 0 0;padding:55px 30px 45px;text-align:center;position:relative;z-index:3}
-.arco h2{font-size:11px;letter-spacing:5px}
-.celebration{font-family:'Great Vibes',cursive;font-size:48px;margin:8px 0 35px}
-.linha{border-left:1px solid rgba(255,255,255,0.7);margin:0 auto;width:230px;text-align:left;padding-left:28px}
-.item{position:relative;margin-bottom:32px}
-.item::before{content:'';position:absolute;left:-34px;top:2px;width:12px;height:12px;background:#E8C99A;border-radius:50%;border:2px solid #fff}
-.item b{display:block;font-size:10px;letter-spacing:3px;margin-bottom:3px}
-.item span{font-size:12px;letter-spacing:1px}
-
-/* DETALHES */
-#tela5{background:#EDE7E1;color:#5C4A3D}
-.details-wrap{width:92%;max-width:390px;position:relative;z-index:3}
-.details-title{font-family:'Great Vibes',cursive;font-size:58px;color:#fff;position:absolute;top:-60px;left:10px;line-height:0.9;z-index:4;text-shadow:0 2px 10px rgba(0,0,0,0.2)}
-.card-detail{background:#fff;border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 12px 30px rgba(0,0,0,0.18)}
-.card-detail img{width:100%;height:100px;object-fit:cover;display:block}
-.card-info{padding:16px;text-align:center;background:#7A6552;color:white}
-.card-info h4{font-size:10px;letter-spacing:4px;margin-bottom:7px}
-.card-info p{font-size:9.5px;line-height:1.7;letter-spacing:1.2px}
-.cores{display:flex;gap:7px;justify-content:center;margin-top:10px}
-.cores span{width:30px;height:42px;border-radius:20px;border:1px solid rgba(255,255,255,0.6)}
-
-/* PRESENTES */
-.wishes h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;letter-spacing:2px}
-.wishes .sub{font-family:'Great Vibes',cursive;font-size:30px;margin-bottom:22px}
-.wishes p{font-size:9.5px;letter-spacing:1.6px;line-height:1.9;margin-bottom:18px}
-.wishes .lojas{font-size:12px;letter-spacing:3px;line-height:2;font-weight:500}
+/* ARCO */
+.arco{background:#8c6b58f0;width:92%;max-width:360px;border-radius:200px 200px 0 0;padding:50px 20px;text-align:center}
+.arco h4{font-size:10px;letter-spacing:4px;font-family:sans-serif}
+.cele{font-family:'Great Vibes',cursive;font-size:44px;margin:10px 0 25px}
+.linha{text-align:left;width:200px;margin:0 auto;border-left:1px solid #fff;padding-left:20px}
+.linha p{font-size:10px;letter-spacing:2px;margin-bottom:20px;line-height:1.5;font-family:sans-serif}
 
 /* RSVP */
-#tela7{background:#fff;color:#5C4A3D;flex-direction:column}
-#tela7 img.bg{border-radius:220px 220px 0 0;width:92%;height:68%;left:4%;top:27%;object-fit:cover}
-.rsvp-title{font-family:'Great Vibes',cursive;font-size:58px;color:#7A6552;margin:45px 0 12px;position:relative;z-index:3}
-.rsvp-box{text-align:center;position:relative;z-index:3}
-.rsvp-contato{font-size:11px;letter-spacing:2.5px;line-height:2;color:#7A6552}
-.btn{margin-top:18px;display:inline-block;background:#7A6552;color:#fff;padding:12px 28px;border-radius:30px;font-size:10px;letter-spacing:3px;text-decoration:none}
-
-/* FINAL */
-.final-text{text-align:center;position:relative;z-index:3}
-.final-text h2{font-family:'Cormorant Garamond',serif;font-size:24px;letter-spacing:2px;font-weight:300;line-height:1.5}
+.rsvp-bg{background:#fff}
+.rsvp-bg .conteudo{color:#5a4a3a}
+.rsvp-titulo{font-family:'Great Vibes',cursive;font-size:50px;color:#7a6552}
 </style>
 </head>
 <body>
 
-<!-- TELA 1 - CAPA HD - CONVITE DE CASAMENTO -->
+<!-- 1 - CAPA CONVITE DE CASAMENTO -->
 <section>
-  <img src="IMG_0071.jpeg" class="bg" style="filter:grayscale(1)">
+  <img src="IMG_0071.jpeg">
   <div class="overlay"></div>
-  <div class="monograma">
-    <div style="font-size:10px;letter-spacing:6px;margin-bottom:15px">CONVITE DE CASAMENTO</div>
-    <div class="letras">HD</div>
-    <svg width="340" height="90" viewBox="0 0 340 90"><text x="50%" y="58" text-anchor="middle" class="draw">Helena & Davi</text></svg>
+  <div class="conteudo">
+    <div class="topo">CONVITE DE CASAMENTO</div>
+    <div class="hd">HD</div>
+    <div class="script">Helena & Davi</div>
     <div class="data">15 . 12 . 2027</div>
   </div>
 </section>
 
-<!-- TELA 2 - SAVE THE DATE -->
-<section id="tela-save">
-  <img src="IMG_0072.jpeg" class="bg">
+<!-- 2 - SAVE THE DATE -->
+<section>
+  <img src="IMG_0072.jpeg">
   <div class="overlay" style="background:rgba(0,0,0,0.45)"></div>
-  <div class="save-box">
-    <h3>SAVE THE DATE</h3>
-    <h2>Helena<br>& Davi</h2>
-    <div class="date-big">15.12.2027</div>
-    <div class="local">RESERVE ESTA DATA<br>PARA O NOSSO CASAMENTO<br>CUAMBA - NIASSA</div>
-    <div style="margin-top:25px;font-size:9px;letter-spacing:4px">CONVITE OFICIAL EM BREVE</div>
+  <div class="conteudo">
+    <div class="save">
+      <h3>SAVE THE DATE</h3>
+      <h2>Helena<br>& Davi</h2>
+      <div class="save-date">15.12.2027</div>
+      <p style="font-size:9px;letter-spacing:3px;margin-top:20px;line-height:1.8">RESERVE ESTA DATA<br>PARA NOSSO CASAMENTO<br>CUAMBA - NIASSA</p>
+    </div>
   </div>
 </section>
 
-<!-- TELA 3 - VOCÊ FOI CONVIDADO -->
+<!-- 3 - FOTO 3 -->
 <section>
-  <img src="IMG_0071.jpeg" class="bg">
-  <div class="overlay" style="background:rgba(0,0,0,0.3)"></div>
-  <div class="conteudo-centro">
-    <div class="titulo">VOCÊ FOI CONVIDADO!</div>
-    <div class="pequeno" style="margin-top:18px">JUNTAMENTE COM SUAS FAMÍLIAS</div>
-    <div class="nome">HELENA</div>
-    <div class="and">e</div>
-    <div class="nome">DAVI</div>
-    <div class="pequeno" style="margin-top:22px">CONVIDAM COM ALEGRIA VOCÊ<br>PARA CELEBRAR O SEU CASAMENTO<br><br><span style="font-size:8px;opacity:0.8">CONVITE DE CASAMENTO OFICIAL</span></div>
-  </div>
-</section>
-
-<!-- TELA 4 - O CASAMENTO -->
-<section>
-  <img src="IMG_0072.jpeg" class="bg">
+  <img src="IMG_0071.jpeg">
   <div class="overlay" style="background:rgba(0,0,0,0.2)"></div>
-  <div class="arco">
-    <h2>O CASAMENTO</h2>
-    <div class="celebration">Celebração</div>
-    <div class="linha">
-      <div class="item"><b>DATA:</b><span>15 DEZEMBRO 2027 - QUARTA</span></div>
-      <div class="item"><b>CHEGADA:</b><span>16H00</span></div>
-      <div class="item"><b>CERIMÔNIA:</b><span>17H30 - CASAMENTO</span></div>
-      <div class="item"><b>LOCAL:</b><span>CUAMBA, NIASSA</span></div>
-    </div>
+  <div class="conteudo">
+    <div style="font-size:26px;letter-spacing:3px;font-family:'Cormorant Garamond',serif">VOCÊ FOI CONVIDADO!</div>
+    <p style="font-size:9px;letter-spacing:3px;margin-top:20px;line-height:2">JUNTAMENTE COM SUAS FAMÍLIAS<br>HELENA E DAVI<br>CONVIDAM PARA SEU CASAMENTO</p>
   </div>
 </section>
 
-<!-- TELA 5 - DETALHES DO CASAMENTO -->
-<section id="tela5">
-  <img src="IMG_0071.jpeg" class="bg" style="opacity:0.18">
-  <div class="details-wrap">
-    <div class="details-title">os<br>detalhes<br>do casamento</div>
-    <div class="card-detail">
-      <img src="IMG_0072.jpeg">
-      <div class="card-info"><h4>LOCAL DO CASAMENTO</h4><p>SALÃO DE EVENTOS<br>RUA PRINCIPAL, CUAMBA<br>NIASSA - MOÇAMBIQUE</p></div>
-    </div>
-    <div class="card-detail">
-      <div class="card-info"><h4>PALETA - TEMA CASAMENTO</h4><p>ELEGÂNCIA NEUTRA - PRETO & BEGE</p>
-        <div class="cores"><span style="background:#000"></span><span style="background:#D8AFAF"></span><span style="background:#F2D5C5"></span><span style="background:#E8DDD0"></span><span style="background:#C9B09A"></span><span style="background:#fff"></span></div>
+<!-- 4 - ARCO CELEBRAÇÃO -->
+<section>
+  <img src="IMG_0072.jpeg">
+  <div class="overlay" style="background:rgba(0,0,0,0.15)"></div>
+  <div class="conteudo">
+    <div class="arco">
+      <h4>O CASAMENTO</h4>
+      <div class="cele">Celebração</div>
+      <div class="linha">
+        <p><b>DATA:</b><br>15 DEZEMBRO 2027</p>
+        <p><b>HORÁRIO:</b><br>16H00 - CHEGADA<br>17H30 - CERIMÔNIA</p>
+        <p><b>LOCAL:</b><br>CUAMBA, NIASSA</p>
       </div>
     </div>
-    <div class="card-detail"><div class="card-info"><h4>TRAJE</h4><p>CASAMENTO FORMAL<br>TRAJE DE GALA - PRETO ELEGANTE</p></div></div>
   </div>
 </section>
 
-<!-- TELA 6 - LISTA DE PRESENTES DE CASAMENTO -->
+<!-- 5 - FOTO 5 -->
 <section>
-  <img src="IMG_0072.jpeg" class="bg">
-  <div class="overlay" style="background:rgba(0,0,0,0.58)"></div>
-  <div class="conteudo-centro wishes">
-    <h2>LISTA DE PRESENTES</h2>
-    <div class="sub">Nosso Casamento</div>
-    <p>SUA PRESENÇA NO NOSSO CASAMENTO É O MAIOR PRESENTE! MAS SE QUISER NOS ABENÇOAR NESTA NOVA ETAPA:</p>
-    <div class="lojas">MPESA - 82 000 0000<br>VODACOM MPESA<br>ENVELOPE NO DIA<br>PIX / TRANSFERÊNCIA</div>
+  <img src="IMG_0071.jpeg">
+  <div class="overlay" style="background:rgba(0,0,0,0.5)"></div>
+  <div class="conteudo">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;letter-spacing:2px">LISTA DE PRESENTES</h2>
+    <p style="font-family:'Great Vibes',cursive;font-size:28px;margin:10px 0 20px">Nosso Casamento</p>
+    <p style="font-size:9px;line-height:2;letter-spacing:1.5px">MPESA - 82 000 0000<br>VODACOM<br>ENVELOPE NO DIA</p>
   </div>
 </section>
 
-<!-- TELA 7 - RSVP CASAMENTO -->
-<section id="tela7">
-  <div class="rsvp-title">Confirme sua presença</div>
-  <div class="rsvp-box">
-    <div class="rsvp-contato">POR FAVOR CONFIRME ATÉ 01.12.2027<br><br>HELENA: 82 000 0000<br>DAVI: 82 000 0000<br><br>CASAMENTO HELENA & DAVI</div>
-    <a class="btn" href="https://wa.me/258820000000?text=Ola!%20Confirmo%20presenca%20no%20casamento%20Helena%20e%20Davi%2015.12.2027">CONFIRMAR NO WHATSAPP</a>
+<!-- 6 - RSVP -->
+<section class="rsvp-bg">
+  <img src="IMG_0072.jpeg" style="height:65%;top:35%;border-radius:200px 200px 0 0;width:92%;left:4%">
+  <div class="conteudo" style="margin-top:-35vh">
+    <div class="rsvp-titulo">Confirme sua presença</div>
+    <p style="font-size:11px;letter-spacing:2px;margin-top:15px;line-height:2">CASAMENTO HELENA & DAVI<br>ATÉ 01.12.2027<br>82 000 0000</p>
+    <a href="https://wa.me/258820000000" style="display:inline-block;margin-top:20px;background:#7a6552;color:#fff;padding:12px 25px;border-radius:25px;text-decoration:none;font-size:10px;letter-spacing:2px">CONFIRMAR NO WHATSAPP</a>
   </div>
-  <img src="IMG_0071.jpeg" class="bg">
 </section>
 
-<!-- TELA 8 - FINAL -->
+<!-- 7 - FINAL -->
 <section>
-  <img src="IMG_0072.jpeg" class="bg" style="filter:grayscale(1)">
-  <div class="overlay" style="background:rgba(0,0,0,0.35)"></div>
-  <div class="final-text"><h2>MAL PODEMOS ESPERAR<br>PARA CELEBRAR NOSSO CASAMENTO<br>COM VOCÊ!<br><br><span style="font-family:'Great Vibes',cursive;font-size:38px">Helena & Davi</span></h2></div>
+  <img src="IMG_0071.jpeg" style="filter:grayscale(1)">
+  <div class="overlay"></div>
+  <div class="conteudo">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300">MAL PODEMOS ESPERAR<br>PARA CELEBRAR NOSSO<br>CASAMENTO COM VOCÊ!</h2>
+    <div class="script" style="margin-top:20px">Helena & Davi</div>
+  </div>
 </section>
-
-<script>
-// EFEITO DE SURGIR QUANDO ROLA - IGUAL VIDEO E-TINT
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('ativo'); } });
-},{threshold:0.18});
-document.querySelectorAll('.conteudo-centro,.arco,.details-wrap,.wishes,.rsvp-box,.final-text,.save-box').forEach(el=>obs.observe(el));
-
-// ATIVA PRIMEIRO
-setTimeout(()=>{document.querySelector('.monograma').classList.add('ativo')},100);
-</script>
 
 </body>
 </html>
